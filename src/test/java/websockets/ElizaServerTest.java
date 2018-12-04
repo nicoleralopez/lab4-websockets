@@ -63,7 +63,7 @@ public class ElizaServerTest {
 		ClientEndpointConfig configuration = ClientEndpointConfig.Builder.create().build();
 		ClientManager client = ClientManager.createClient();
 		client.connectToServer(new ElizaEndpointToComplete(list,cd), configuration, new URI("ws://localhost:8025/websockets/eliza"));
-		// Waiting for the answer
+		// Waiting the answer
 		cd.await(); // COMPLETE ME!!
 		// Correct message recieved
 		assertEquals(list.get(3),"Can you think of a specific example?"); // COMPLETE ME!!
